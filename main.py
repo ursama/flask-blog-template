@@ -3,8 +3,8 @@ from email.header import Header
 import requests
 import smtplib
 
-SEND_TO = "mrozkajka@gmail.com"
-SEND_FROM = "kajka.birthday.wisher@gmail.com"
+SEND_TO = "Your mail"
+SEND_FROM = "Your mail"
 
 app = Flask(__name__)
 response = requests.get(url="https://api.npoint.io/32870786301096dd67ce")
@@ -29,7 +29,7 @@ def contact():
     if request.method == "POST":
         connection = smtplib.SMTP("smtp.gmail.com")
         connection.starttls()
-        connection.login(user=SEND_FROM, password="eanncrudtteixpxn")
+        connection.login(user=SEND_FROM, password="password for 'SEND_FROM' email")
         connection.sendmail(
             from_addr=SEND_FROM,
             to_addrs=SEND_TO,
